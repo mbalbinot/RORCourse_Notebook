@@ -1,0 +1,43 @@
+<div class="form-style-6">
+  <h1><%= t('messages.info') %> <%= @contact.model_name.human %></h1>
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong><%= Contact.human_attribute_name("name") %>: </strong>
+    <%= @contact.name %>
+  </p>
+
+  <p>
+    <strong><%= Contact.human_attribute_name("email") %>: </strong>
+    <%= @contact.email %>
+  </p>
+
+  <p>
+    <strong><%= Contact.human_attribute_name("kind") %>: </strong>
+    <%= @contact.kind.description %>
+  </p>
+
+  <p>
+    <strong><%= Address.human_attribute_name("street") %>: </strong>
+    <%= @contact.address.street %>
+  </p>
+
+  <p>
+    <strong><%= Address.human_attribute_name("city") %>: </strong>
+    <%= @contact.address.city %>
+  </p>
+
+  <p>
+    <strong><%= Address.human_attribute_name("state") %>: </strong>
+    <%= @contact.address.state %>
+  </p>
+
+  <p>
+    <strong><%= Contact.human_attribute_name("rmk") %>: </strong>
+    <%= @contact.rmk %>
+  </p>
+
+  <%= link_to t('buttons.edit'), edit_contact_path(@contact) %> |
+  <%= link_to t('buttons.back'), contacts_path %>
+</div>

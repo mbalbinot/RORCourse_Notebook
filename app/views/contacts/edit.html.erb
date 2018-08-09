@@ -1,0 +1,10 @@
+<div class="form-style-6">
+
+  <h1><%= t('messages.editing') %> <%= @contact.model_name.human %></h1>
+
+  <%= render 'form' %>
+
+  <%= link_to t('buttons.show'), @contact %> |
+  <%= link_to t('buttons.back'), contact_path %>
+
+</div>

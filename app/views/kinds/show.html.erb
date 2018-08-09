@@ -1,0 +1,14 @@
+<div class="form-style-6">
+  <h1><%= t('messages.info') %> <%= @kind.model_name.human %></h1>
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong><%= Kind.human_attribute_name("description") %>: </strong>
+    <%= @kind.description %>
+  </p>
+
+  <%= link_to t('buttons.edit'), edit_kind_path(@kind) %> |
+  <%= link_to t('buttons.back'), kinds_path %>
+
+</div>
