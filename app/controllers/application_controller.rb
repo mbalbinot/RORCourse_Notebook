@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   #Select kinds to show
-  def get_kinds
+  def set_kind_options
     @kinds_selection = Kind.all
   end
 end

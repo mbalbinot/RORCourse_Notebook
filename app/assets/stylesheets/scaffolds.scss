@@ -5,14 +5,15 @@
     padding: 16px;
     background: #F7F7F7;
 }
-.form-style-6 h1{
-    background: #4B99AD;
-    padding: 20px 0;
-    font-size: 140%;
-    font-weight: 300;
-    text-align: center;
-    color: #fff;
-    margin: -16px -16px 16px -16px;
+.form-style-6 {
+  font: 95% Arial, Helvetica, sans-serif;
+  max-width: 80%;
+  margin: 10px auto;
+  padding: 16px;
+  background: #F7F7F7;
+}
+.form-style-6 div.field_with_errors{
+    color: #ff0000;
 }
 .form-style-6 input[type="text"],
 .form-style-6 input[type="date"],
@@ -132,4 +133,9 @@
       border-right: none;
     }
   }
+}
+
+.pagination {
+  text-align: right;
+  padding-right: 5%;
 }

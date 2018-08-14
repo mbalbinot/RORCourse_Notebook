@@ -1,10 +1,11 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_kind_options, only: [:new, :edit, :update, :create]
 
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.order(:name).page(params[:page]).per(15)
   end
 
   # GET /contacts/1
@@ -16,12 +17,10 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @contact.build_address
-    get_kinds
   end
 
   # GET /contacts/1/edit
   def edit
-      get_kinds
   end
 
   # POST /contacts

@@ -27,8 +27,9 @@
     </tbody>
   </table>
 
-  <br>
+  <%= paginate @contacts %>
+  <br/><br/>
 
-  <%= link_to t('buttons.new'), new_contact_path %> |
+    <%= link_to t('buttons.new'), new_contact_path %> |
   <%= link_to t('buttons.home'), home_index_path %>
 </div>
